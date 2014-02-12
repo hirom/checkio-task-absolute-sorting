@@ -1,6 +1,6 @@
 
 cover = """def cover(func, data):
-    result = func(data)
+    result = func(tuple(data))
     if not isinstance(result, (list, tuple)):
         raise TypeError("The result should be a list or a tuple")
     return result

@@ -7,7 +7,7 @@
     {% if "python" in interpreter|lower %}
     (a tuple)
     {% endif %}
-    with numbers. You should sort it, but sort it by absolute values in ascending order.
+    with various numbers. You should sort it, but sort it by absolute values in ascending order.
     For example for the sequence (-20, -5, 10, 15) the result will be (-5, 10, 15, 20).
     You function should return the sorted list {% if "python" in interpreter|lower %} or tuple{% endif %}.
 </p>
@@ -25,6 +25,10 @@
     Also use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> a key parameter for sorting</a>.
     {% endif %}
 </p>
+
+<p>
+    <strong>Precondition:</strong> Numbers in the array are unique by modulus.
+</p>
 <p>
     <strong>Input: </strong> An array of numbers {% if "python" in interpreter|lower %}A tuple.{% endif %}
 </p>
@@ -32,6 +36,8 @@
 <p>
     <strong>Output: </strong> The sorted list or tuple (but not a generator) by absolute values in ascending order.
 </p>
+
+
 
 <p>
     <strong>Addition: </strong> The results of your function will be showed as a list in the tests explanation panel.
