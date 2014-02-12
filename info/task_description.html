@@ -8,7 +8,7 @@
     (a tuple)
     {% endif %}
     with various numbers. You should sort it, but sort it by absolute values in ascending order.
-    For example for the sequence (-20, -5, 10, 15) the result will be (-5, 10, 15, 20).
+    For example for the sequence (-20, -5, 10, 15) the result will be (-5, 10, 15, -20).
     You function should return the sorted list {% if "python" in interpreter|lower %} or tuple{% endif %}.
 </p>
 
@@ -51,7 +51,7 @@
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio((-20, -5, 10, 15)) == (-5, 10, 15, 20) # or [-5, 10, 15, 20]
+checkio((-20, -5, 10, 15)) == (-5, 10, 15, -20) # or [-5, 10, 15, -20]
 checkio((1, 2, 3, 0)) == (0, 1, 2, 3)
 checkio((-1, -2, -3, 0)) == (0, -1, -2, -3)
     </pre>

@@ -3,6 +3,6 @@ def checkio(numbers_array):
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
-    assert checkio((-20, -5, 10, 15)) == (-5, 10, 15, 20), "Example" # or [-5, 10, 15, 20]
+    assert checkio((-20, -5, 10, 15)) == (-5, 10, 15, -20), "Example"  # or [-5, 10, 15, -20]
     assert checkio((1, 2, 3, 0)) == (0, 1, 2, 3), "Positive numbers"
     assert checkio((-1, -2, -3, 0)) == (0, -1, -2, -3), "Negative numbers"
