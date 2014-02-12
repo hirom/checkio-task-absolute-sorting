@@ -1,39 +1,57 @@
 <p>
-    <i>( Describe task in general )</i>
+    How about sorting? Let's try to sort an array with specific rules.
 </p>
 
 <p>
-    Sum two passed ints
-</p>
-
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    You are given an array
+    {% if "python" in interpreter|lower %}
+    (a tuple)
+    {% endif %}
+    with numbers. You should sort it, but sort it by absolute values in ascending order.
+    For example for the sequence (-20, -5, 10, 15) the result will be (-5, 10, 15, 20).
+    You function should return the sorted list {% if "python" in interpreter|lower %} or tuple{% endif %}.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Hints: </strong> This task can be easily solved with these functions.
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.org/2/library/functions.html#sorted">sorted</a> and
+    <a href="http://docs.python.org/2/library/functions.html#abs">abs</a>.
+    Also use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> a key parameter for sorting</a>.
+
+    {% else %}
+    <a href="http://docs.python.org/3/library/functions.html#sorted">sorted</a> and
+    <a href="http://docs.python.org/3/library/functions.html#abs">abs</a>.
+    Also use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> a key parameter for sorting</a>.
+    {% endif %}
 </p>
+<p>
+    <strong>Input: </strong> An array of numbers {% if "python" in interpreter|lower %}A tuple.{% endif %}
+</p>
+
+<p>
+    <strong>Output: </strong> The sorted list or tuple (but not a generator) by absolute values in ascending order.
+</p>
+
+<p>
+    <strong>Addition: </strong> The results of your function will be showed as a list in the tests explanation panel.
+</p>
+
 
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+checkio((-5, 10, 15, 20)) == (-20, -5, 10, 15) # or [-20, -5, 10, 15]
+checkio((1, 2, 3, 0)) == (0, 1, 2, 3)
+checkio((-1, -2, -3, 0)) == (0, -1, -2, -3)
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    Sorting is a part of many tasks, so it will be useful to know how to use it.
 </p>
