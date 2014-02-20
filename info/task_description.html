@@ -4,42 +4,42 @@
 
 
 <p>
-    How about sorting? Let's try to sort an array with the specific rules.
+    Let's try some sorting. Here is an array with the specific rules.
 </p>
 
 <p>
-    You are given an array
+    The array
     {% if "python" in interpreter|lower %}
     (a tuple)
     {% endif %}
-    with various numbers. You should sort it, but sort it by absolute values in ascending order.
-    For example for the sequence (-20, -5, 10, 15) the result will be (-5, 10, 15, -20).
-    You function should return the sorted list {% if "python" in interpreter|lower %} or tuple{% endif %}.
+    has various numbers. You should sort it, but sort it by absolute value in ascending order.
+    For example, the sequence (-20, -5, 10, 15) will be sorted like so: (-5, 10, 15, -20).
+    Your function should return the sorted list {% if "python" in interpreter|lower %} or tuple{% endif %}.
 </p>
 
 <p>
-    <strong>Hints: </strong> This task can be easily solved with these functions:
+    <strong>Hints: </strong> This task can be easily solved using these functions:
     {% if "python 2" in interpreter|lower %}
     <a href="http://docs.python.org/2/library/functions.html#sorted">sorted</a> and
     <a href="http://docs.python.org/2/library/functions.html#abs">abs</a>.
-    Also try to use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> a key parameter for sorting</a>.
+    You should try to use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> the key parameter for sorting</a>.
 
     {% else %}
     <a href="http://docs.python.org/3/library/functions.html#sorted">sorted</a> and
     <a href="http://docs.python.org/3/library/functions.html#abs">abs</a>.
-    Also use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> key parameter for sorting</a>.
+    You should try to use <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> the key parameter for sorting</a>.
     {% endif %}
 </p>
 
 <p>
-    <strong>Precondition:</strong> Numbers in the array are unique by modulus.
+    <strong>Precondition:</strong> The numbers in the array are unique by their absolute values.
 </p>
 <p>
-    <strong>Input: </strong> An array of numbers {% if "python" in interpreter|lower %}A tuple.{% endif %}
+    <strong>Input: </strong> An array of numbers {% if "python" in interpreter|lower %}a tuple.{% endif %}.
 </p>
 
 <p>
-    <strong>Output: </strong> The sorted list or tuple (but not a generator) by absolute values in ascending order.
+    <strong>Output: </strong> The list or tuple (but not a generator) sorted by absolute values in ascending order.
 </p>
 
 
