@@ -1,0 +1,70 @@
+<img class="for_info_only" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" width="300px"
+        style="float: left; margin-top: -5px; "/>
+
+<p>
+    Essayons maintenant de trier une liste avec quelques r&egrave;gles sp&eacute;cifiques.
+</p>
+
+<p>
+    La liste
+    {% if "python" in interpreter|lower %}
+    (un tuple)
+    {% endif %}
+    contient plusieurs nombres. Vous devez les trier, mais en se basant sur leurs valeurs absolues dans l'ordre croissant.
+    Par exemple, la s&eacute;quence (-20, -5, 10, 15) sera tri&eacute;e comme telle : (-5, 10, 15, -20).
+    Votre fonction doit retourner la liste tri&eacute;e {% if "python" in interpreter|lower %} ou le tuple tri&eacute;{% endif %}.
+</p>
+
+<p>
+    <strong>Conseils : </strong> Vous pouvez facilement r&eacute;soudre cette t&acirc;che avec ces fonctions :
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.org/2/tutorial/introduction.html#lists">sorted</a> et
+    <a href="http://docs.python.org/2/tutorial/introduction.html#strings">abs</a>.
+    Vous devez essayer d'utiliser <a href="http://docs.python.org/2/library/functions.html#sum"> le param&egrave;tre key de la fonction de tri</a>.
+    {% else %}
+    <a href="http://docs.python.org/3/tutorial/introduction.html#lists">sorted</a> et
+    <a href="http://docs.python.org/3/tutorial/introduction.html#strings">abs</a>.
+    Vous devez essayer d'utiliser <a href="http://docs.python.org/3/library/functions.html#sum"> le param&egrave;tre key de la fonction de tri</a>.
+    {% endif %}
+</p>
+
+<p>
+    <strong>Pr&eacute;condition : </strong> Les nombres dans la liste sont uniques de part leur valeur absolue.
+</p>
+<p>
+    <strong>Entr&eacute;e : </strong> Un liste de nombres {% if "python" in interpreter|lower %}, un tuple.{% endif %}.
+</p>
+
+<p>
+    <strong>Sortie : </strong> Une liste ou un tuple (mais pas un g&eacute;n&eacute;rateur) tri&eacute;e en fonction des valeurs absolues dans l'ordre croissant.
+</p>
+
+
+<p>
+    <strong>Compl&eacute;ment : </strong> Les r&eacute;sultats de votre fonction seront affich&eacute;s en tant que liste dans le volet d'explication des tests.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple : </strong>
+    </p>
+    <pre class="brush: python">
+checkio((-20, -5, 10, 15)) == [-5, 10, 15, -20] # ou (-5, 10, 15, -20)
+checkio((1, 2, 3, 0)) == [0, 1, 2, 3]
+checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>&Agrave; quoi cela sert : </strong>
+    Trier fait partie de beaucoup de t&acirc;ches, ce sera donc utile de savoir comment l'utiliser.
+</p>
+
+<p>
+    <strong>Pr&eacute;condition : </strong>:
+    len(set(abs(x) for x in liste)) == len(liste)<br>
+    0 &lt; len(liste) &lt; 100<br>
+    all(isinstance(x, int) for x in liste)<br>
+    all(-100 &lt; x &lt; 100 for x in liste)<br>
+</p>
