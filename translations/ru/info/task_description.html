@@ -14,27 +14,12 @@
 </p>
 
 <p>
-    <strong>Замечания: </strong>
-    Эта задача может быть легко решена с использованием следующих функций:
-    {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/library/functions.html#sorted">sorted</a> и
-    <a href="http://docs.python.org/2/library/functions.html#abs">abs</a>.
-    Так же вы должны попробовать <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> параметр key для сортировки</a>.
-
-    {% else %}
-    <a href="http://docs.python.org/3/library/functions.html#sorted">sorted</a> и
-    <a href="http://docs.python.org/3/library/functions.html#abs">abs</a>.
-    Так же вы должны попробовать <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions"> параметр key для сортировки</a>.
-    {% endif %}
-</p>
-
-<p>
-    <strong>Вх. данные: </strong>
+    <strong>Входные данные: </strong>
     Массив чисел как кортеж (tuple).
 </p>
 
 <p>
-    <strong>Вых. данные: </strong>
+    <strong>Выходные данные: </strong>
     Список (list) или кортеж (tuple) (но не генератор) отсортированный по абсолютным значениям чисел.
 </p>
 
@@ -57,7 +42,7 @@ checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
 </div>
 
 <p class="for_info_only">
-    <strong>Как это используется: </strong>
+    <strong>Зачем это нужно: </strong>
     Сортировка это часть очень многих задач, так что будет полезно понимать, как ее использовать.
 </p>
 
