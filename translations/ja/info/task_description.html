@@ -1,0 +1,106 @@
+<img class="for_info_only" title="X" src="{{MEDIA}}X.png" alt="X"
+     style="width: 300px;float: left; margin-top: 30px; "/>
+
+
+<!--
+<p>
+    Let's try some sorting. Here is an array with the specific rules.
+</p>
+-->
+<p>
+    幾つかの並び替えにチャレンジしてみましょう。ここには特定のルールに従った配列があります。
+</p>
+
+<!--
+<p>
+    The array
+    {% if "python" in interpreter|lower %}
+    (a tuple)
+    {% endif %}
+    has various numbers. You should sort it, but sort it by absolute value in ascending order.
+    For example, the sequence (-20, -5, 10, 15) will be sorted like so: (-5, 10, 15, -20).
+    Your function should return the sorted list {% if "python" in interpreter|lower %} or tuple{% endif %}.
+</p>
+-->
+<p>
+    その配列
+    {% if "python" in interpreter|lower %}
+    (タプル)
+    {% endif %}
+    は様々な数字を持っています。 あなたはそれを並び替かえなければいけません。ただし絶対値で且つ昇順で並べ替えてください.
+    例えば、(-20, -5, 10, 15)の配列は、次のように並び替えされます:  (-5, 10, 15, 20)
+    あなたの関数は、並び替え済みの配列{% if "python" in interpreter|lower %}もしくはタプル{% endif%}を返さなければいけません。
+</p>
+
+<!--
+<p>
+    <strong>Precondition:</strong> The numbers in the array are unique by their absolute values.
+</p>
+-->
+<p>
+    <strong>条件:</strong> 配列内の数値は(絶対値が)ユニークである。
+</p>
+
+
+<!--
+<p>
+    <strong>Input: </strong> An array of numbers {% if "python" in interpreter|lower %}, a tuple.{% endif %}.
+</p>
+-->
+<p>
+    <strong>入力: </strong> 数値の配列、 {% if "python" in interpreter|lower %},もしくはタプル.{% endif %}.
+</p>
+
+<!--
+<p>
+    <strong>Output: </strong> The list or tuple (but not a generator) sorted by absolute values in ascending order.
+</p>
+-->
+<p>
+    <strong>出力: </strong> 絶対値で昇順に並び替えられた配列かタプル(ジェネレーターではなく)。
+</p>
+
+<!--
+<p>
+    <strong>Addition: </strong> The results of your function will be shown as a list in the tests explanation panel.
+</p>
+-->
+<p>
+    <strong>追記: </strong> あなたの関数の結果は、テストの説明パネルのリストとして表示されます。
+</p>
+
+<div class="for_info_only">
+    <p>
+<!--
+        <strong>Example:</strong>
+-->
+        <strong>例:</strong>
+    </p>
+    <pre class="brush: python">
+checkio((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
+checkio((1, 2, 3, 0)) == [0, 1, 2, 3]
+checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
+    </pre>
+</div>
+
+<!--
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    Sorting is a part of many tasks, so it will be useful to know how to use it.
+</p>
+-->
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    「並び替え」は多くのタスクの一部としてよく現れるので、どのように使うかを知っていると役に立ちます。
+</p>
+
+<p>
+<!--
+    <strong>Precondition</strong>:
+-->
+    <strong>条件</strong>:
+    len(set(abs(x) for x in array)) == len(array)<br>
+    0 &lt; len(array) &lt; 100<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 for x in array)<br>
+</p>
