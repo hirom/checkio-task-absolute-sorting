@@ -1,0 +1,30 @@
+<p><img alt="X" class="for_info_only" src="{{MEDIA}}X.png" style="width: 300px;float: left; margin-top: 30px; " title="X" /></p>
+
+<p>Vamos a experimentar con ordenamiento (clasificaci&oacute;n). Aqu&iacute; hay una matriz con normas espec&iacute;ficas.</p>
+
+<p>El vector (una tupla) tiene varios n&uacute;meros. Debes ordenarla por valor absoluto en orden ascendente. Por ejemplo, la secuencia (-20, -5, 10, 15), queda ordenada de la siguiente forma: (-5, 10, 15, -20). Tu funci&oacute;n debe devolver la lista (o tupla) ordenada.</p>
+
+<p><strong>Condiciones:</strong> Los n&uacute;meros de la matriz son &uacute;nicos por sus valores absolutos.</p>
+
+<p><strong>Datos de Entrada: </strong> Un conjunto de n&uacute;meros, una tupla.</p>
+
+<p><strong>Salida: </strong> La lista o tupla (pero no un generador) ordenados por valores absolutos en orden ascendente.</p>
+
+<p><strong>Adicional: </strong> Los resultados de tu funci&oacute;n ser&aacute;n presentados como una lista en panel de explicaci&oacute;n de pruebas.</p>
+
+<div class="for_info_only">
+<p><strong>Ejemplo:</strong></p>
+
+<pre class="brush: python">
+checkio((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
+checkio((1, 2, 3, 0)) == [0, 1, 2, 3]
+checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
+    </pre>
+</div>
+
+<p class="for_info_only"><strong>&iquest;C&oacute;mo se usa?: </strong> La clasificaci&oacute;n /ordenamiento es una parte de muchas tareas, por lo que es bastante &uacute;til saber c&oacute;mo se usa.</p>
+
+<p><strong>Condiciones</strong>: len(set(abs(x) for x in array)) == len(array)<br />
+0 &lt; len(array) &lt; 100<br />
+all(isinstance(x, int) for x in array)<br />
+all(-100 &lt; x &lt; 100 for x in array)</p>
