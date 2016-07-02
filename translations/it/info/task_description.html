@@ -1,0 +1,58 @@
+<img class="for_info_only" title="X" src="{{MEDIA}}X.png" alt="X"
+     style="width: 300px;float: left; margin-top: 30px; "/>
+
+
+<p>
+    Proviamo ad ordinare qualcosa. Ecco una lista con le regole precise.
+</p>
+
+<p>
+    La lista
+    {% if "python" in interpreter|lower %}
+    (una tupla)
+    {% endif %}
+    contiene vari numeri. Devi ordinarla in ordine crescente, ma usando il valore assoluto.
+    Ad esempio, la sequenza (-20, -5, 10, 15) sar&agrave; cos&igrave; ordinata: (-5, 10, 15, -20).
+    La tua funzione deve restituire la lista ordinata {% if "python" in interpreter|lower %} o la tupla{% endif %}.
+</p>
+
+<p>
+    <strong>Prerequisiti:</strong> I numeri della lista sono unici rispetto al loro valore assoluto.
+</p>
+<p>
+    <strong>Input: </strong> Una lista di numeri {% if "python" in interpreter|lower %}, una tupla.{% endif %}.
+</p>
+
+<p>
+    <strong>Output: </strong> La lista o la tupla (ma non un generatore) ordinata in modo ascendent rispetto ai valori assoluti.
+</p>
+
+
+<p>
+    <strong>Aggiunta: </strong> I risultati della tua funzione saranno mostrati come una lista nel pannello delle spiegazioni dei tests.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Esempio:</strong>
+    </p>
+    <pre class="brush: python">
+checkio((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
+checkio((1, 2, 3, 0)) == [0, 1, 2, 3]
+checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Come si usa: </strong>
+    Ordinare &egrave; parte di molti compiti, dunque ti sar&agrave; utile sapere come si fa.
+</p>
+
+<p>
+    <strong>Prerequisiti:</strong>:
+    len(set(abs(x) for x in array)) == len(array)<br>
+    0 &lt; len(array) &lt; 100<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 for x in array)<br>
+</p>
