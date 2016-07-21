@@ -7,8 +7,8 @@ function absoluteSorting(numbers){
 var assert = require('assert');
 
 if (!global.is_checking) {
-    assert.equal(absoluteSorting([-20, -5, 10, 15]), [-5, 10, 15, -20], "Example");
-    assert.equal(absoluteSorting([1, 2, 3, 0]), [0, 1, 2, 3], "Positive numbers");
-    assert.equal(absoluteSorting([-1, -2, -3, 0]), [0, -1, -2, -3], "Negative numbers");
+    assert.deepEqual(absoluteSorting([-20, -5, 10, 15]), [-5, 10, 15, -20], "Example");
+    assert.deepEqual(absoluteSorting([1, 2, 3, 0]), [0, 1, 2, 3], "Positive numbers");
+    assert.deepEqual(absoluteSorting([-1, -2, -3, 0]), [0, -1, -2, -3], "Negative numbers");
     console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
 }
