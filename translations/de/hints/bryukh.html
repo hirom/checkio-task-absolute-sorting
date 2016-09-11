@@ -1,0 +1,41 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        Ich habe keine Idee, wie ich anfangen soll, diese Mission zu lösen
+    </div>
+    <div class="answer">
+        Zuerst, lies über die Funktionen <a href="http://docs.python.org/2/library/functions.html#sorted">sorted</a> und
+        <a href="http://docs.python.org/2/library/functions.html#abs">abs</a>.
+<pre class="brush: python">
+abs(5) == abs(-5) == 5
+sorted([1, 5, 2, -3]) == [-3, 1, 2, 5]
+    </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ich benötige etwas Hilfe, um mit der Mission weiterfahren zu können
+    </div>
+    <div class="answer">
+        Versuche <a href="https://wiki.python.org/moin/HowTo/Sorting/#Key_Functions">den Schlüssel-Parameter "key" für das Sortieren</a>.
+
+<pre class="brush: python">
+#sort by last digit for numbers from 10 to 99 only
+sorted([11, 20, 54, 73], key=lambda x: str(x)[1]) == [20, 11, 73, 54]
+#sort lists by sums
+sorted([[90, 11], [99, 1], [200], [30, 50, 50]], key=sum) == [[99, 1], [90, 11], [30, 50, 50], [200]]
+    </pre>
+"key" ändert keine Elemente.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ich bin auf halbem Wege verloren. Ich brauche Hilfe!
+    </div>
+    <div class="answer">
+        Schaue Dir genau den letzten und ersten Hinweis an, dann platziere Deinen "key".
+    </div>
+</div>
+
+
+</body>
