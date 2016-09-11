@@ -1,0 +1,62 @@
+<img class="for_info_only half" title="X" src="{{MEDIA}}X.png" alt="X"
+     style="float: left"/>
+
+
+<p>
+    Versuchen wir's mit etwas Sortieren. Hier ist ein Array (Datenfeld) mit den spezifischen Regeln. 
+</p>
+
+<p>
+    Das Array
+    {% if "python" in interpreter|lower %}
+    (a tuple)
+    {% endif %}
+    enthält verschiedene Zahlen. Du solltest es sortieren, aber in Absolutbeträgen in aufsteigender Folge.
+    Zum Beispiel, die Folge (-20, -5, 10, 15) sollte wie folgt sortiert sein: (-5, 10, 15, -20).
+    Deine Funktion sollte eine sortierte Liste {% if "python" in interpreter|lower %} oder ein Tupel {% endif %} zurückgeben.
+</p>
+
+<p>
+    <strong>Voraussetzung:</strong> Jede Zahl im Arrray ist einmalig in ihrem Absolutbetrag.
+</p>
+<p>
+    <strong>Eingabe: </strong> Ein Array von Zahlen {% if "python" in interpreter|lower %}, ein Tupel.{% endif %}.
+</p>
+
+<p>
+    <strong>Ausgabe: </strong> Die Liste oder das Tupel (aber kein Generator-Objekt) sortiert in Absolutbeträgen und aufsteigender Folge.
+</p>
+
+
+<p>
+    <strong>Ergänzung: </strong> Die Resultate Deiner Funktion werden als Liste im Erläuterungsfenster des Tests angezeigt.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiel:</strong>
+    </p>
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+absoluteSorting((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
+absoluteSorting((1, 2, 3, 0)) == [0, 1, 2, 3]
+absoluteSorting((-1, -2, -3, 0)) == [0, -1, -2, -3]
+{% else %}
+checkio((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
+checkio((1, 2, 3, 0)) == [0, 1, 2, 3]
+checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
+{% endif %}</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wozu ist das gut: </strong>
+    Sortieren ist Teil vieler Aufgaben, also ist es nützlich, über die Anwendung Bescheid zu wissen.
+</p>
+
+<p>
+    <strong>Bedingung</strong>:
+    len(set(abs(x) for x in array)) == len(array)<br>
+    0 &lt; len(array) &lt; 100<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 for x in array)<br>
+</p>
