@@ -3,7 +3,7 @@
 
 
 <p>
-    Versuchen wir's mit etwas Sortieren. Hier ist ein Array (Datenfeld) mit den spezifischen Regeln. 
+    Versuchen wir's mit etwas Sortieren. Hier ist ein Array mit den spezifischen Regeln. 
 </p>
 
 <p>
@@ -11,7 +11,7 @@
     {% if "python" in interpreter|lower %}
     (a tuple)
     {% endif %}
-    enthält verschiedene Zahlen. Du solltest es sortieren, aber in Absolutbeträgen in aufsteigender Folge.
+    enthält verschiedene Zahlen. Du solltest es sortieren, aber nach den Absolutbeträgen der Zahlen in aufsteigender Folge.
     Zum Beispiel, die Folge (-20, -5, 10, 15) sollte wie folgt sortiert sein: (-5, 10, 15, -20).
     Deine Funktion sollte eine sortierte Liste {% if "python" in interpreter|lower %} oder ein Tupel {% endif %} zurückgeben.
 </p>
@@ -20,11 +20,11 @@
     <strong>Voraussetzung:</strong> Jede Zahl im Arrray ist einmalig in ihrem Absolutbetrag.
 </p>
 <p>
-    <strong>Eingabe: </strong> Ein Array von Zahlen {% if "python" in interpreter|lower %}, ein Tupel.{% endif %}.
+    <strong>Eingabe: </strong> Ein Array von Zahlen {% if "python" in interpreter|lower %}, ein Tupel{% endif %}.
 </p>
 
 <p>
-    <strong>Ausgabe: </strong> Die Liste oder das Tupel (aber kein Generator-Objekt) sortiert in Absolutbeträgen und aufsteigender Folge.
+    <strong>Ausgabe: </strong> Die Liste oder das Tupel (aber kein Generator-Objekt) sortiert nach Absolutbeträgen und aufsteigender Folge.
 </p>
 
 
