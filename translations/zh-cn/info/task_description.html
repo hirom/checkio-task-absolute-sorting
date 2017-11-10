@@ -1,0 +1,54 @@
+<img class="for_info_only half" title="X" src="{{MEDIA}}X.png" alt="X"
+     style="float: left"/>
+
+
+<p>
+    让我们尝试一下排序，请用一些特别的规则处理我们的数组。
+</p>
+
+<p>
+数组（一个元组）有不同的数字。 你应该对它进行排序，但按绝对值按升序排序。 例如，序列（-20，-5，10，15）将按如下排序：（-5，10，15，-20）。 你的函数应该返回排序后的列表或元组。
+<p>
+    <strong>前提条件:</strong> 这些数组里面的数字的绝对值都是不同的。
+</p>
+<p>
+    <strong>输入: </strong> 一个数字组成的数组（元组）
+</p>
+
+<p>
+    <strong>输出: </strong> 一个按绝对值大小升序排序好的列表或数组（但不应该是一个生成器）
+</p>
+
+
+<p>
+    <strong>多说一句: </strong> 你的函数的结果将显示在测试说明面板中的列表中
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>举个栗子:</strong>
+    </p>
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+absoluteSorting((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
+absoluteSorting((1, 2, 3, 0)) == [0, 1, 2, 3]
+absoluteSorting((-1, -2, -3, 0)) == [0, -1, -2, -3]
+{% else %}
+checkio((-20, -5, 10, 15)) == [-5, 10, 15, -20] # or (-5, 10, 15, -20)
+checkio((1, 2, 3, 0)) == [0, 1, 2, 3]
+checkio((-1, -2, -3, 0)) == [0, -1, -2, -3]
+{% endif %}</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>你将学到什么: </strong>
+    排序在很多任务中都能用到，所以掌握排序十分必要。
+</p>
+
+<p>
+    <strong>前提条件</strong>:
+    len(set(abs(x) for x in array)) == len(array)<br>
+    0 &lt; len(array) &lt; 100<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 for x in array)<br>
+</p>
